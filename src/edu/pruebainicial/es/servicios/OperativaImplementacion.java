@@ -43,7 +43,9 @@ public class OperativaImplementacion implements OperativaInterfaz {
 	@Override
 	public void modificarCliente(List<AlumnoDto> listaAlumnos) {
 		Scanner sc = new Scanner(System.in);
+		MenuInterfaz mI= new MenuImplementacion();
 		int opcion=0;
+		Boolean cerrarMenu=false;
 		System.out.println("Indique el dni del alumno que desea modificar: ");
 		String dni=sc.next();
 		
@@ -51,6 +53,15 @@ public class OperativaImplementacion implements OperativaInterfaz {
 		{
 			if(alumno.getDniAlumno().equals(dni)) 
 			{
+				while(!cerrarMenu) 
+				{
+					opcion=mI.menuModificacion();
+				switch(opcion) 
+				{
+					
+				
+				}
+				}
 				
 			}
 			else 
